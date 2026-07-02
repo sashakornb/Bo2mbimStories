@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sashakornb.github.io/Bo2mbimStories/sitemap.xml
