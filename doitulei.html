@@ -167,6 +167,16 @@
   .img-portrait figure{ border-radius:6px; overflow:hidden; aspect-ratio:2/3; }
   .img-portrait figcaption{ font-size:0.8rem; opacity:0.6; margin-top:10px; text-align:center; }
 
+  /* ---------- GALLERY BAND ---------- */
+  .gallery{ background:var(--olive); color:var(--cream); padding:72px 6vw; margin-top:20px; }
+  .gallery-inner{ max-width:1100px; margin:0 auto; }
+  .gallery-head{ max-width:560px; margin:0 auto 32px; text-align:center; }
+  .gallery-head h2{ color:var(--lime); font-style:italic; font-size:1.9rem; margin-bottom:12px; }
+  .gallery-head p{ opacity:0.85; font-size:0.96rem; }
+  .gallery-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .gallery-grid img{ width:100%; aspect-ratio:3/2; object-fit:cover; border-radius:6px; }
+  @media(max-width:760px){ .gallery-grid{ grid-template-columns:1fr 1fr; } }
+
   /* ---------- COST CARD ---------- */
   .cost{ background:var(--olive); color:var(--cream); border-radius:10px; padding:36px 34px; margin:48px 0; }
   .cost h3{ color:var(--lime); font-size:1.4rem; font-style:italic; margin-bottom:18px; }
@@ -258,9 +268,19 @@
   <h2>เดินฝ่าป่าชันสู่ยอดจอวาเล</h2>
   <p>เช้าตรู่ถึงท่าสองยาง ทานมื้อเช้ากันเอง แล้วนั่งรถกระบะไปจุดเริ่มเดิน จากนั้นออกเดินเท้าประมาณ 6–7 กม. เส้นทางลาดสลับชันตลอดสาย พักทานมื้อกลางวันกลางป่า แล้วเดินต่อจนถึงแคมป์จอวาเลตอนบ่าย</p>
 
+  <div class="img-duo">
+    <div class="cell"><img src="images/TL11.jpg" alt="เดินขึ้นสันเขาเขียวสู่จอวาเล เป้กันฝนสีแดง"></div>
+    <div class="cell"><img src="images/TL10.jpg" alt="กางแขนดีใจเมื่อขึ้นถึงสันเขาจอวาเล"></div>
+  </div>
+
   <div class="img-full">
     <figure><img src="images/TL5.jpg" alt="หมู่คณะถ่ายรูปที่ป้ายยอดดอยจอวาเล ทะเลหมอกสองแผ่นดิน 1,360 ม. ท่าสองยาง จ.ตาก"></figure>
     <figcaption>ถึงยอดดอยจอวาเล — “ทะเลหมอกสองแผ่นดิน” สูง 1,360 ม. ต.ท่าสองยาง อ.ท่าสองยาง จ.ตาก</figcaption>
+  </div>
+
+  <div class="img-duo">
+    <div class="cell"><img src="images/TL14.jpg" alt="กางแขนถ่ายรูปคู่ป้ายยอดดอยจอวาเล"></div>
+    <div class="cell"><img src="images/TL9.jpg" alt="ถ่ายรูปคู่ป้ายยอดดอยจอวาเลกับธงไตรรงค์"></div>
   </div>
 
   <p>กางเต็นท์เสร็จก็ได้เวลารอชมพระอาทิตย์ตก ซึ่งเป็นไฮไลต์แรกของทริป 🌅 พอฟ้ามืดลง พระจันทร์เสี้ยวก็โผล่ขึ้นเหนือสันเขาที่ยังเรืองแสงส้ม สวยจนลืมความเหนื่อยทั้งวัน</p>
@@ -273,7 +293,7 @@
   <p>ตกกลางคืนล้อมวงคุยกับเพื่อนร่วมทริป ฟ้าเปิดจนดาวเต็มท้องฟ้า เห็นทางช้างเผือกพาดผ่านเหนือแคมป์ ก่อนแยกย้ายพักผ่อนเก็บแรงไว้ลุยวันรุ่งขึ้น</p>
 
   <div class="img-duo">
-    <div class="cell"><img src="images/night-stars-tents.jpg" alt="เต็นท์เรียงรายใต้ดาวที่แคมป์จอวาเล"></div>
+    <div class="cell"><img src="images/TL15.jpg" alt="แคมป์เต็นท์ยามพระอาทิตย์ตกที่จอวาเล"></div>
     <div class="cell"><img src="images/TL3.jpg" alt="ทางช้างเผือกและดาวเต็มฟ้าเหนือแคมป์เต็นท์ที่จอวาเล"></div>
   </div>
 
@@ -282,8 +302,8 @@
   <p>ตื่นตั้งแต่ 6 โมงเช้า ลุ้นทะเลหมอกที่จอวาเล ☁️ หลังมื้อเช้าเก็บแคมป์เดินต่อไปดอยทูเล ระยะทาง 3–4 กม. วันนี้ส่วนใหญ่เดินบนสันเขา วิวเปิดโล่งแต่แดดแรง</p>
 
   <div class="img-full">
-    <figure><img src="images/TL1.jpg" alt="เดินบนสันเขาวิวเปิด มองทะเลหมอกสองแผ่นดินสุดลูกหูลูกตา"></figure>
-    <figcaption>เดินสันเขาวิวเปิด — มองทะเลหมอกสองแผ่นดินสุดลูกหูลูกตา</figcaption>
+    <figure><img src="images/TL12.jpg" alt="ยืนมองทะเลหมอกยามเช้าที่จอวาเลก่อนเดินสู่ดอยทูเล"></figure>
+    <figcaption>เช้าที่จอวาเล — ทะเลหมอกเต็มหุบก่อนเก็บแคมป์เดินต่อ</figcaption>
   </div>
 
   <ul class="checkpoints">
@@ -293,11 +313,21 @@
     <li><span class="ico">💦</span><span><strong>ลำธาร + น้ำตกลับ</strong> — เล่นน้ำได้ เดินตัวเปล่าไปน้ำตกลับได้</span></li>
   </ul>
 
+  <div class="img-duo">
+    <div class="cell"><img src="images/TL6.jpg" alt="น้ำตกลับใกล้แคมป์ดอยทูเล เล่นน้ำได้"></div>
+    <div class="cell"><img src="images/TL8.jpg" alt="สายน้ำตกไหลผ่านโขดหินที่ดอยทูเล"></div>
+  </div>
+
   <p class="pullquote">“ถึงแคมป์ดอยทูเลตอนเที่ยง มีลำธารให้เล่นน้ำ เดินตัวเปล่าไปน้ำตกลับได้ — จุดพักที่ผ่อนคลายที่สุดของทริป”</p>
 
-  <div class="img-portrait">
-    <figure><img src="images/TL4.jpg" alt="ป้ายยอดดอยทูเล กับธงและพระจันทร์เสี้ยว ยามแสงทองริมสันเขา"></figure>
-    <figcaption>ป้ายยอดดอยทูเล ยามแสงทองใกล้ค่ำ</figcaption>
+  <div class="img-full">
+    <figure><img src="images/TL17.jpg" alt="ถ่ายรูปคู่ป้ายยอดดอยทูเลกับทะเลหมอกด้านหลัง"></figure>
+    <figcaption>ถึงป้ายยอดดอยทูเล ท่ามกลางทะเลหมอก</figcaption>
+  </div>
+
+  <div class="img-duo">
+    <div class="cell"><img src="images/TL7.jpg" alt="ยืนถ่ายรูปคู่ป้ายยอดดอยทูเลกับธงไตรรงค์"></div>
+    <div class="cell"><img src="images/TL4.jpg" alt="ป้ายยอดดอยทูเล กับธงและพระจันทร์เสี้ยว ยามแสงทอง"></div>
   </div>
 
   <span class="day-tag">Day 3 · ดอยทูเล → กลับกรุงเทพฯ</span>
@@ -315,7 +345,7 @@
   <div class="cost">
     <h3>💰 สรุปค่าใช้จ่าย (แบบทัวร์ครบวงจร)</h3>
     <div class="cost-row"><span>รถตู้ + รถโฟร์วีลตลอดทริป</span><span class="amt">รวมแล้ว</span></div>
-    <div class="cost-row"><span>ลูกหาบ + ไกด์นำทาง</span><span class="amt">รวมแล้ว</span></div>
+    <div class="cost-row"><span>ลูกหาบส่วนกลาง + ไกด์นำทาง</span><span class="amt">รวมแล้ว</span></div>
     <div class="cost-row"><span>ค่าธรรมเนียม</span><span class="amt">รวมแล้ว</span></div>
     <div class="cost-row"><span>อาหาร 6 มื้อ + น้ำดื่ม + สตาฟทำอาหาร</span><span class="amt">รวมแล้ว</span></div>
     <div class="cost-row"><span>ประกันการเดินทาง</span><span class="amt">วงเงิน 1 ล้าน</span></div>
@@ -323,6 +353,21 @@
     <div class="cost-note">* ไม่รวมมื้อเช้าวันแรกที่ท่าสองยาง</div>
   </div>
 </article>
+
+<!-- GALLERY -->
+<div class="gallery">
+  <div class="gallery-inner">
+    <div class="gallery-head">
+      <h2>เก็บตกภาพประทับใจ</h2>
+      <p>อีกหลายช็อตจากทริปดอยทูเล-จอวาเล ที่ไม่อยากให้พลาด</p>
+    </div>
+    <div class="gallery-grid">
+      <img src="images/TL18.jpg" alt="หมู่คณะชูธงไตรรงค์ที่ป้ายยอดดอยจอวาเล">
+      <img src="images/TL13.jpg" alt="รอยยิ้มใต้หมวกไหมพรมสีส้มยามพลบค่ำที่จอวาเล">
+      <img src="images/TL16.jpg" alt="จอกล้องแอ็กชันบันทึกภาพพระอาทิตย์ตกที่จอวาเล">
+    </div>
+  </div>
+</div>
 
 <!-- ENGAGEMENT -->
 <div class="engage">
