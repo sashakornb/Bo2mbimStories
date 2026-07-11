@@ -131,8 +131,8 @@
     text-align:center; color:var(--cream); padding:120px 6vw 70px; overflow:hidden;
   }
   .hero .bg{position:absolute; inset:0; z-index:0;}
-  .hero .bg img{filter:brightness(0.62) saturate(1.05); object-position:center 40%;}
-  .hero .bg::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,21,15,0.15), rgba(20,21,15,0.72));}
+  .hero .bg img{filter:brightness(0.6) saturate(1.05); object-position:center 28%;}
+  .hero .bg::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,21,15,0.1), rgba(20,21,15,0.75));}
   .hero-content{position:relative; z-index:1; max-width:760px;}
   .hero-eyebrow{font-size:0.78rem; letter-spacing:0.2em; text-transform:uppercase; opacity:0.95; margin-bottom:18px; color:var(--lime);}
   .hero h1{ font-size:clamp(2.2rem, 5.6vw, 4.2rem); font-style:italic; font-weight:400; color:var(--lime); line-height:1.12; margin-bottom:22px; }
@@ -166,6 +166,8 @@
   .img-full{ margin:44px 0; }
   .img-full figure{ border-radius:6px; overflow:hidden; aspect-ratio:16/9; }
   .img-full figcaption{ font-size:0.8rem; opacity:0.6; margin-top:10px; text-align:center; }
+  .img-duo{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:44px 0; }
+  .img-duo .cell{ border-radius:6px; overflow:hidden; aspect-ratio:3/4; }
   .img-portrait{ max-width:440px; margin:44px auto; }
   .img-portrait figure{ border-radius:6px; overflow:hidden; aspect-ratio:2/3; }
   .img-portrait figcaption{ font-size:0.8rem; opacity:0.6; margin-top:10px; text-align:center; }
@@ -213,6 +215,7 @@
 
   @media(max-width:760px){
     .stats-inner{ grid-template-columns:1fr 1fr; gap:28px 20px; }
+    .img-duo{ grid-template-columns:1fr; }
     .navlinks{display:none;}
   }
 </style>
@@ -228,7 +231,7 @@
       <a href="https://www.facebook.com/profile.php?id=100083008793177&locale=th_TH" target="_blank" rel="noopener">Facebook ↗</a>
     </div>
   </nav>
-  <div class="bg"><img src="images/TL1.jpg" alt="ยืนมองทะเลหมอกสองแผ่นดินจากสันเขาดอยทูเล-จอวาเล ท่าสองยาง จ.ตาก"></div>
+  <div class="bg"><img src="images/tulei-hero.jpg" alt="ทะเลหมอกและสันเขาดอยทูเล-จอวาเล ท่าสองยาง จ.ตาก ยามพระอาทิตย์ขึ้น"></div>
   <div class="hero-content">
     <div class="hero-eyebrow">ดอยทูเล-จอวาเล · ท่าสองยาง จ.ตาก</div>
     <h1>สามวันบนดอยทูเล-จอวาเล</h1>
@@ -273,14 +276,19 @@
 
   <p>ตกกลางคืนล้อมวงคุยกับเพื่อนร่วมทริป ฟ้าเปิดจนดาวเต็มท้องฟ้า เห็นทางช้างเผือกพาดผ่านเหนือแคมป์ ก่อนแยกย้ายพักผ่อนเก็บแรงไว้ลุยวันรุ่งขึ้น</p>
 
-  <div class="img-full">
-    <figure><img src="images/TL3.jpg" alt="ทางช้างเผือกและดาวเต็มฟ้าเหนือแคมป์เต็นท์ที่จอวาเล"></figure>
-    <figcaption>คืนแรกใต้ทางช้างเผือก เหนือแคมป์จอวาเล</figcaption>
+  <div class="img-duo">
+    <div class="cell"><img src="images/night-stars-tents.jpg" alt="เต็นท์เรียงรายใต้ดาวที่แคมป์จอวาเล"></div>
+    <div class="cell"><img src="images/TL3.jpg" alt="ทางช้างเผือกและดาวเต็มฟ้าเหนือแคมป์เต็นท์ที่จอวาเล"></div>
   </div>
 
   <span class="day-tag">Day 2 · จอวาเล → ดอยทูเล</span>
   <h2>เดินสันเขา วิวเปิดสุดลูกหูลูกตา</h2>
   <p>ตื่นตั้งแต่ 6 โมงเช้า ลุ้นทะเลหมอกที่จอวาเล ☁️ หลังมื้อเช้าเก็บแคมป์เดินต่อไปดอยทูเล ระยะทาง 3–4 กม. วันนี้ส่วนใหญ่เดินบนสันเขา วิวเปิดโล่งแต่แดดแรง</p>
+
+  <div class="img-full">
+    <figure><img src="images/cloud-sea-viewpoint.jpg" alt="ทะเลหมอกยามเช้าที่จอวาเล ก่อนออกเดินสู่ดอยทูเล"></figure>
+    <figcaption>เช้าที่จอวาเล — ลุ้นทะเลหมอกก่อนเก็บแคมป์เดินต่อ</figcaption>
+  </div>
 
   <ul class="checkpoints">
     <li><span class="ico">🥾</span><span><strong>สันเขายาว</strong> — เดินบนสันวิวเปิดโล่งทั้งวัน สวยแต่แดดแรง</span></li>
@@ -288,6 +296,11 @@
     <li><span class="ico">🚻</span><span><strong>แคมป์ดอยทูเล</strong> — มีห้องน้ำ ถึงตอนเที่ยง จุดพักที่ผ่อนคลายที่สุด</span></li>
     <li><span class="ico">💦</span><span><strong>ลำธาร + น้ำตกลับ</strong> — เล่นน้ำได้ เดินตัวเปล่าไปน้ำตกลับได้</span></li>
   </ul>
+
+  <div class="img-duo">
+    <div class="cell"><img src="images/misty-hill-2.jpg" alt="เดินบนสันเขาโล่งระหว่างทางสู่ดอยทูเล"></div>
+    <div class="cell"><img src="images/foggy-tent.jpg" alt="แคมป์ดอยทูเลที่มีลำธารและน้ำตกลับให้เล่นน้ำ"></div>
+  </div>
 
   <p class="pullquote">“ถึงแคมป์ดอยทูเลตอนเที่ยง มีลำธารให้เล่นน้ำ เดินตัวเปล่าไปน้ำตกลับได้ — จุดพักที่ผ่อนคลายที่สุดของทริป”</p>
 
@@ -299,6 +312,12 @@
   <span class="day-tag">Day 3 · ดอยทูเล → กลับกรุงเทพฯ</span>
   <h2>ทะเลหมอกรอบสุดท้าย แล้วลาเขา</h2>
   <p>ตื่นชมทะเลหมอกรอบสุดท้าย แล้วเก็บสัมภาระเดินลงเขาประมาณ 6–7 กม. ถึงหมู่บ้านตอนสายๆ ทำธุระส่วนตัวก่อนเดินทางกลับ ระหว่างทางแวะซื้อของฝากที่ตลาดดอยมูเซอ 🛍️</p>
+
+  <div class="img-duo">
+    <div class="cell"><img src="images/TL1.jpg" alt="ยืนมองทะเลหมอกสองแผ่นดินรอบสุดท้ายจากสันเขาดอยทูเล"></div>
+    <div class="cell"><img src="images/misty-hill-1.jpg" alt="ทะเลหมอกที่ดอยทูเลก่อนเดินลงเขา"></div>
+  </div>
+
   <p>ถึงกรุงเทพฯ ประมาณเที่ยงคืน จบทริปแบบอิ่มทั้งวิวและใจ ทริปนี้เหมาะกับใครอยากเดินป่าแบบไม่ต้องวางแผนเอง ได้ทั้งทะเลหมอกสองแผ่นดิน สันเขาสวย และเพื่อนใหม่กลับบ้าน 🏔️</p>
 
   <!-- COST -->
@@ -316,7 +335,7 @@
 
 <!-- ENGAGEMENT -->
 <div class="engage">
-  <div class="bg"><img src="images/TL1.jpg" alt=""></div>
+  <div class="bg"><img src="images/tulei-hero.jpg" alt=""></div>
   <div class="engage-content">
     <div class="poll">
       <div class="q">แล้วคุณล่ะ… ชอบเดินป่าแบบไหน?</div>
