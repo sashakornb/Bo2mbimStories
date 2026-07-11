@@ -124,21 +124,16 @@
   .navlinks{display:flex; gap:26px; font-size:0.8rem;}
   .navlinks a{opacity:0.9;}
 
-  /* ---------- HERO ---------- */
-  .hero{
-    position:relative; min-height:92vh;
-    display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
-    text-align:center; color:var(--cream); padding:120px 6vw 70px; overflow:hidden;
-  }
-  .hero .bg{position:absolute; inset:0; z-index:0;}
-  .hero .bg img{filter:brightness(0.6) saturate(1.05); object-position:center 28%;}
-  .hero .bg::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,21,15,0.1), rgba(20,21,15,0.75));}
-  .hero-content{position:relative; z-index:1; max-width:760px;}
-  .hero-eyebrow{font-size:0.78rem; letter-spacing:0.2em; text-transform:uppercase; opacity:0.95; margin-bottom:18px; color:var(--lime);}
-  .hero h1{ font-size:clamp(2.2rem, 5.6vw, 4.2rem); font-style:italic; font-weight:400; color:var(--lime); line-height:1.12; margin-bottom:22px; }
-  .hero p{font-size:1.06rem; opacity:0.94; max-width:520px; margin:0 auto 30px;}
-  .hero-meta{display:flex; gap:22px; justify-content:center; flex-wrap:wrap; font-size:0.8rem; opacity:0.9;}
-  .hero-meta span{display:inline-flex; align-items:center; gap:6px;}
+  /* ---------- COVER BANNER (แสดงรูปปกเต็ม ไม่ครอบตัดตัวหนังสือในรูป) ---------- */
+  .cover{ position:relative; background:var(--black); }
+  .cover img{ width:100%; height:auto; aspect-ratio:1271/715; object-fit:cover; }
+  .cover::before{ content:""; position:absolute; top:0; left:0; right:0; height:130px; background:linear-gradient(180deg, rgba(20,21,15,0.5), transparent); z-index:5; pointer-events:none; }
+  .post-head{ max-width:760px; margin:0 auto; padding:60px 6vw 6px; text-align:center; }
+  .post-head .eyebrow{ font-size:0.78rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--teal); margin-bottom:16px; }
+  .post-head h1{ font-size:clamp(2.1rem, 5vw, 3.6rem); font-style:italic; font-weight:400; color:var(--olive-dark); line-height:1.12; margin-bottom:18px; }
+  .post-head .sub{ font-size:1.05rem; color:var(--olive-dark); opacity:0.85; max-width:520px; margin:0 auto 22px; }
+  .hero-meta{ display:flex; gap:22px; justify-content:center; flex-wrap:wrap; font-size:0.82rem; opacity:0.7; }
+  .hero-meta span{ display:inline-flex; align-items:center; gap:6px; }
 
   /* ---------- STATS STRIP ---------- */
   .stats{ background:var(--olive-dark); color:var(--cream); padding:44px 6vw; }
@@ -222,7 +217,7 @@
 </head>
 <body>
 
-<div class="hero">
+<div class="cover">
   <nav>
     <div class="logo"><a href="index.html">Bo2mbim Stories</a></div>
     <div class="navlinks">
@@ -231,18 +226,19 @@
       <a href="https://www.facebook.com/profile.php?id=100083008793177&locale=th_TH" target="_blank" rel="noopener">Facebook ↗</a>
     </div>
   </nav>
-  <div class="bg"><img src="images/tulei-hero.jpg" alt="ทะเลหมอกและสันเขาดอยทูเล-จอวาเล ท่าสองยาง จ.ตาก ยามพระอาทิตย์ขึ้น"></div>
-  <div class="hero-content">
-    <div class="hero-eyebrow">ดอยทูเล-จอวาเล · ท่าสองยาง จ.ตาก</div>
-    <h1>สามวันบนดอยทูเล-จอวาเล</h1>
-    <p>ม่อนคลุย → จอวาเล → ดอยทูเล เดินสันเขาชมทะเลหมอกสองแผ่นดิน แบบครบวงจร ไม่ต้องแบกของหนัก ไม่ต้องหาทางเอง</p>
-    <div class="hero-meta">
-      <span>🗓️ 21–23 พฤศจิกายน 2025</span>
-      <span>🏔️ สูง 1,360 ม.</span>
-      <span>⏱️ อ่าน 4 นาที</span>
-    </div>
-  </div>
+  <img src="images/tulei-hero.jpg" alt="ปกทริปดอยทูเล-จอวาเล — ทะเลหมอกสองแผ่นดิน ท่าสองยาง จ.ตาก">
 </div>
+
+<header class="post-head">
+  <div class="eyebrow">ดอยทูเล-จอวาเล · ท่าสองยาง จ.ตาก</div>
+  <h1>สามวันบนดอยทูเล-จอวาเล</h1>
+  <p class="sub">ม่อนคลุย → จอวาเล → ดอยทูเล เดินสันเขาชมทะเลหมอกสองแผ่นดิน แบบครบวงจร ไม่ต้องแบกของหนัก ไม่ต้องหาทางเอง</p>
+  <div class="hero-meta">
+    <span>🗓️ 21–23 พฤศจิกายน 2025</span>
+    <span>🏔️ สูง 1,360 ม.</span>
+    <span>⏱️ อ่าน 4 นาที</span>
+  </div>
+</header>
 
 <!-- STATS -->
 <div class="stats">
